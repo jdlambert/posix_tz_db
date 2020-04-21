@@ -13,4 +13,6 @@ Provide user-facing clients with `zones.json` to have a shared timezone vocabula
 
 ### Build
 
-Since the build is heavily environment-dependant, the Dockerfile provides a consistent build environment — latest Arch Linux. When the IANA timezone updates (a few times a year, usually: see the latest version [here](https://www.iana.org/time-zones)), just run `make` in the root directory to rebuild all the "data" build artifacts (`zones.c` etc.). These data build artifacts can be checked in to source control since they change so infrequently.
+Since the build is heavily environment-dependant, the Dockerfile provides a consistent build environment — latest Arch Linux. When the IANA timezone database updates (a few times a year, usually: see the latest version [here](https://www.iana.org/time-zones) and compare to the release name/date), just run `make` in the root directory to rebuild all the "data" build artifacts (`zones.c` etc.). These data build artifacts can be checked in to source control since they change so infrequently.
+
+If the IANA timezone database hasn't changed, you can just build `zones.o`, which isn't as sensitive to the build environment.
