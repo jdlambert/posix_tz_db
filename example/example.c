@@ -27,7 +27,7 @@ void print_local_time(const char *name) {
     strftime(strftime_buf, sizeof(strftime_buf), "%c", &timeinfo);
     printf("The current date/time in %s is: %s\n", name, strftime_buf);
   } else {
-    printf("Unknown timezone!\n");
+    printf("%s is not a known timezone!\n", name);
   }
   
 }
