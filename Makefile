@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS=-I.
-DEPS = zones.h
+DEPS=zones.h
 TAG=posix-tz-db
 
 .PHONY: all clean example docker
