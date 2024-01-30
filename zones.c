@@ -1,10 +1,7 @@
 #include "zones.h"
 #include <stdio.h>
 
-typedef struct {
-  const char *name;
-  const char *posix_str;
-} micro_tz_db_pair;
+
 
 static const micro_tz_db_pair micro_tz_db_tzs[425] = {
   {"Africa/Abidjan", "GMT0"},
@@ -485,4 +482,9 @@ const char *micro_tz_db_get_posix_str(const char *name) {
     }
   }
   return NULL;
+}
+
+const micro_tz_db_pair *get_tz_db(void)
+{
+  return micro_tz_db_tzs;
 }
